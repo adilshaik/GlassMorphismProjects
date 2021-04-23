@@ -1,0 +1,140 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    background: #161623;
+    height: 100vh;
+    width: 100%;
+}
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(20% at right 70%);
+    z-index: -2;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+    z-index: -2;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 50px;
+    height: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(225, 225, 225, 0.1);
+    border-top: 2px solid rgba(225, 225, 225, 0.5);
+    border-left: 2px solid rgba(225, 225, 225, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container .card .imgBox {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    margin: 40px auto;
+    border: 10px solid rgba(225, 225, 225, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container .card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.card:hover .imgBox img {
+    opacity: 1;
+}
+
+.container .card .textBox {
+    margin: 25px;
+}
+
+.container .card .textBox h2{
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.2em;
+    text-align: center;
+    line-height: 0.9em;
+}
+
+.container .card .textBox h2 span {
+    font-size: 0.4em;
+}
+
+.container .card .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .links li {
+    list-style: none;
+    margin: 10px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.card:hover .links li {
+    transform: translateY(0px);
+    opacity: 1;    
+}
+
+.container .card .links li a {
+    font-size: 30px;
+    color: #fff;
+}
